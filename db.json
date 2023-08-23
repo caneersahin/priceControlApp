@@ -1,0 +1,78 @@
+{
+  "product": [
+    {
+      "name": "Caner2",
+      "prices": "70.000",
+      "id": 2
+    },
+    {
+      "name": "asd",
+      "prices": "asdasd",
+      "id": 3
+    },
+    {
+      "name": "asd",
+      "prices": "asdasd",
+      "id": 4
+    },
+    {
+      "name": "sdaf",
+      "prices": "sdfsdafsdf",
+      "id": 25
+    },
+    {
+      "name": "sdaf",
+      "prices": "sdfsdafsdf",
+      "id": 26
+    },
+    {
+      "name": "emre",
+      "prices": "yunus",
+      "id": 27
+    }
+  ],
+  "productDetail": [
+    {
+      "productName": "Caner2",
+      "productPrices": "70.000",
+      "productLink": "www.canersahin.net",
+      "productId": 2,
+      "id": 1
+    },
+    {
+      "productName": "Caner2",
+      "productPrices": "70.000",
+      "productLink": "www.canersahin.net",
+      "productId": 2,
+      "id": 2
+    },
+    {
+      "productName": "Caner2",
+      "productPrices": "70.000",
+      "productLink": "www.canersahin.net",
+      "productId": 2,
+      "id": 3
+    },
+    {
+      "productName": "Caner2",
+      "productPrices": "70.000",
+      "productLink": "www.canersahin.net",
+      "productId": 2,
+      "id": 4
+    },
+    {
+      "productName": "Caner2",
+      "productPrices": "70.000",
+      "productLink": "www.canersahin.net",
+      "productId": 2,
+      "id": 5
+    },
+    {
+      "productName": "Caner2",
+      "productPrices": "70.000",
+      "productLink": "www.canersahin.net",
+      "productId": 2,
+      "id": 6
+    }
+  ]
+}
