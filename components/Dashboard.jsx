@@ -10,7 +10,6 @@ import { useRemoveProductsDetailMutation } from "../store/index.jsx";
 
 function Dashboard() {
   const test = useRemoveProductsDetailMutation();
-  console.log("caner", test)
   const {
     data: productsDetailData,
     isError,
