@@ -1,22 +1,23 @@
 import { createSlice } from '@reduxjs/toolkit';
-const initialState = [];
 
-const productsSlice = createSlice({
+const initialState = {
+  productItems: [],
+  length: 0
+};
+
+
+const productsSliceReducer = createSlice({
   name: 'products',
   initialState,
   reducers: {
-    setProducts: (state, action) => {
-      return action.payload;
-    },
-    addProduct: (state, action) => {
-      state.push(action.payload);
-    },
-    removeProduct: (state, action) => {
-      return state.filter(product => product.id !== action.payload);
-    },
-  },
+    setProduct: (state) => {
+      debugger
+      state.productItems = ["caner"]
+    }
+  }
 });
 
-export const { setProducts, addProduct, removeProduct } = productsSlice.actions;
+console.log(initialState)
 
-export default productsSlice.reducer;
+export const { setProduct } = productsSliceReducer.actions
+export default productsSliceReducer.reducer;

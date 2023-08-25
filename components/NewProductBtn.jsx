@@ -13,7 +13,7 @@ import { useState } from "react";
 import { useAddProductsMutation } from "../store";
 import { useFetchProductsQuery } from "../store/";
 import { FiPlus } from "react-icons/fi";
-
+import { ToastContainer, toast } from "react-toastify";
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   "& .MuiDialogContent-root": {
     padding: theme.spacing(2),
@@ -47,24 +47,24 @@ function BootstrapDialogTitle(props) {
   );
 }
 
-BootstrapDialogTitle.propTypes = {
-  children: PropTypes.node,
-  onClose: PropTypes.func.isRequired,
-};
-
 function NewProductBtn() {
   const [productName, setProductName] = useState("");
-  const [productPrice, setProductPrice] = useState("");
+  const [productLink, setProductLink] = useState("");
+
   const [addProduct, { isLoading, refetch }] = useAddProductsMutation();
   const { refetch: refetchProducts } = useFetchProductsQuery();
+
   const handleAddProduct = () => {
-    addProduct({ name: productName, prices: productPrice })
+    addProduct({ name: productName, link: productLink })
       .then(() => {
-        console.log("Product added successfully");
+        toast.success("Product added successfully"); // Toast mesajını burada gösteriyoruz
         refetchProducts();
+        handleClose();
+        setProductName("");
+        setProductLink("");
       })
       .catch((error) => {
-        console.error("Error adding product:", error);
+        toast.error("Error adding product"); // Toast mesajını burada gösteriyoruz
       });
   };
   const [open, setOpen] = useState(false);
@@ -85,6 +85,7 @@ function NewProductBtn() {
       >
         Add New Product
       </Button>
+      <ToastContainer />
       <BootstrapDialog
         onClose={handleClose}
         aria-labelledby="customized-dialog-title"
@@ -94,23 +95,38 @@ function NewProductBtn() {
           id="customized-dialog-title"
           onClose={handleClose}
         >
-          Modal title
+          Yeni Kayıt Ekle
         </BootstrapDialogTitle>
         <DialogContent dividers>
           <TextField
-            label="Product Name"
+            id="outlined-textarea"
+            label="Ürün Adı"
             value={productName}
+            placeholder="Ürün Adı"
+            multiline
+            style={{
+              width: "100%",
+              marginTop: "2%",
+              marginBottom: "5%",
+            }}
             onChange={(e) => setProductName(e.target.value)}
           />
           <TextField
-            label="Product Price"
-            value={productPrice}
-            onChange={(e) => setProductPrice(e.target.value)}
+            id="outlined-textarea"
+            label="Ürün Takip Linki"
+            value={productLink}
+            placeholder="Ürün Takip Linki"
+            multiline
+            style={{
+              width: "100%",
+              marginTop: "2%",
+            }}
+            onChange={(e) => setProductLink(e.target.value)}
           />
         </DialogContent>
         <DialogActions>
           <Button autoFocus onClick={handleAddProduct} disabled={isLoading}>
-            Save changes
+            Kaydet
           </Button>
         </DialogActions>
       </BootstrapDialog>

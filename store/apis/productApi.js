@@ -16,16 +16,43 @@ const productApi = createApi({
           };
         },
         transformResponse: (response) => {
-          var tableColumnName = ["Product ID", "Product Name", "Price", "Event"]
-          var tableColumnData = ["id", "name", "price"]
+          var tableColumnName = ["Product ID", "Product Name", "Link", "Event"]
+          var tableColumnData = ["id", "name", "link"]
           response.tableColumnName = tableColumnName
           response.tableColumnData = tableColumnData
-
+          response.iconType = { "iconType": "DELETE", "color": "error" }
+          return response;
+        },
+      }),
+      fetchProductsById: builder.query({
+        query: (productId) => {
+          if (productId === 'all') {
+            return {
+              url: '/productDetail',
+              method: 'GET',
+            };
+          } else {
+            return {
+              url: '/productDetail',
+              method: 'GET',
+              params: {
+                productId: productId,
+              },
+            };
+          }
+        },
+        transformResponse: (response) => {
+          var tableColumnName = ["Product ID", "Product Name", "Price", "Product Link", "Event"]
+          var tableColumnData = ["productId", "productName", "productPrices", "productLink"]
+          response.tableColumnName = tableColumnName
+          response.tableColumnData = tableColumnData
+          response.iconType = { "iconType": "LINK", "color": "primary" }
           return response;
         },
       }),
       addProducts: builder.mutation({
         query: (newProduct) => {
+          console.log(newProduct)
           return {
             url: '/product',
             method: 'POST',
@@ -56,6 +83,7 @@ const productApi = createApi({
           var tableColumnData = ["productId", "productName", "productPrices", "productLink"]
           response.tableColumnName = tableColumnName
           response.tableColumnData = tableColumnData
+          response.iconType = { "iconType": "LINK", "color": "primary" }
           return response;
         },
       }),
@@ -74,6 +102,6 @@ const productApi = createApi({
   },
 })
 
-export const { useFetchProductsQuery, useAddProductsMutation, useRemoveProductsMutation, useFetchProductsDetailQuery, useRemoveProductsDetailMutation } = productApi;
+export const { useFetchProductsQuery, useFetchProductsByIdQuery, useAddProductsMutation, useRemoveProductsMutation, useFetchProductsDetailQuery, useRemoveProductsDetailMutation } = productApi;
 
 export default productApi;

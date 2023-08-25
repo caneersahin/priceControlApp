@@ -7,9 +7,10 @@ import TableContainer from "@mui/material/TableContainer";
 import Paper from "@mui/material/Paper";
 import TableHead from "@mui/material/TableHead";
 
-function ProductListTable({ data, isError }) {
+function ProductListTable({ data, isError, refetch }) {
   const tableColumnNames = data?.tableColumnName;
   const tableColumnDatas = data?.tableColumnData;
+  const tableIconType = data?.iconType;
 
   let content;
   if (!data) {
@@ -24,12 +25,7 @@ function ProductListTable({ data, isError }) {
         </TableHead>
         <TableBody>
           {data.map((item) => (
-            <TableRowItem
-              key={item.id}
-              data={item}
-              refetch={item}
-              tableColumnDatas={tableColumnDatas}
-            />
+            <TableRowItem key={item.id} tableProps = {{ data:item, refetch: refetch, tableColumnDatas, iconType: tableIconType}} />
           ))}
         </TableBody>
       </Table>

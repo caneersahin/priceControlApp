@@ -1,11 +1,11 @@
 import TableCell from "@mui/material/TableCell";
 import TableRow from "@mui/material/TableRow";
 import Button from "@mui/material/Button";
-import { FiTrash2 } from "react-icons/fi";
+import { FiTrash2, FiExternalLink } from "react-icons/fi";
 import { useRemoveProductsMutation } from "../../store/index.jsx";
 
-function TableRowItem({ data, refetch, tableColumnDatas }) {
-
+function TableRowItem({ tableProps }) {
+  const { data, refetch, tableColumnDatas, iconType } = tableProps;
   const [removeProduct] = useRemoveProductsMutation();
   const handleDelete = (productId) => {
     removeProduct({ id: productId })
@@ -24,10 +24,10 @@ function TableRowItem({ data, refetch, tableColumnDatas }) {
           {data[item]}
         </TableCell>
       ))}
-
       <TableCell align="center" style={{ color: "error" }}>
-        <Button onClick={() => handleDelete(data.id)} color="error">
-          {<FiTrash2 size={22} color="error"></FiTrash2>}
+        <Button onClick={() => handleDelete(data.id)} color={iconType.color}>
+          {iconType.iconType === "DELETE" && <FiTrash2 size={22} />}
+          {iconType.iconType === "LINK" && <FiExternalLink size={22} />}
         </Button>
       </TableCell>
     </TableRow>

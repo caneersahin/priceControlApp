@@ -158,8 +158,9 @@ export default function PersistentDrawerLeft() {
       <Main open={open}>
         <DrawerHeader />
         <Routes>
+        <Route path="/" element={<Dashboard />} />
+
           <Route path="/dashboard" element={<Dashboard />} />
-          {/* Diğer sayfa bileşenleri için de benzer şekilde Route ekleyebilirsiniz */}
         </Routes>
       </Main>
     </Box>

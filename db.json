@@ -1,34 +1,19 @@
 {
   "product": [
     {
-      "name": "Caner2",
-      "prices": "70.000",
+      "name": "Macbook",
+      "link": "www.canersahin.net",
       "id": 2
     },
     {
-      "name": "asd",
-      "prices": "asdasd",
+      "name": "Iphone",
+      "link": "www.canersahin.net",
       "id": 3
     },
     {
-      "name": "asd",
-      "prices": "asdasd",
+      "name": "Klavye",
+      "link": "www.canersahin.net",
       "id": 4
-    },
-    {
-      "name": "sdaf",
-      "prices": "sdfsdafsdf",
-      "id": 25
-    },
-    {
-      "name": "sdaf",
-      "prices": "sdfsdafsdf",
-      "id": 26
-    },
-    {
-      "name": "emre",
-      "prices": "yunus",
-      "id": 27
     }
   ],
   "productDetail": [
@@ -57,14 +42,14 @@
       "productName": "Caner2",
       "productPrices": "70.000",
       "productLink": "www.canersahin.net",
-      "productId": 2,
+      "productId": 3,
       "id": 4
     },
     {
       "productName": "Caner2",
       "productPrices": "70.000",
       "productLink": "www.canersahin.net",
-      "productId": 2,
+      "productId": 1,
       "id": 5
     },
     {
