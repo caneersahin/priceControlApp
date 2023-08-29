@@ -14,50 +14,174 @@
       "name": "Klavye",
       "link": "www.canersahin.net",
       "id": 4
+    },
+    {
+      "name": "sas",
+      "link": "sass",
+      "date": "29.08.2023",
+      "id": 5
     }
   ],
   "productDetail": [
     {
       "productName": "Caner2",
-      "productPrices": "70.000",
+      "productPrices": 40000,
       "productLink": "www.canersahin.net",
+      "date": "29.08.2023",
       "productId": 2,
       "id": 1
     },
     {
       "productName": "Caner2",
-      "productPrices": "70.000",
+      "productPrices": 50000,
       "productLink": "www.canersahin.net",
+      "date": "29.08.2023",
       "productId": 2,
       "id": 2
     },
     {
       "productName": "Caner2",
-      "productPrices": "70.000",
+      "productPrices": 60000,
       "productLink": "www.canersahin.net",
+      "date": "29.08.2023",
       "productId": 2,
       "id": 3
     },
     {
       "productName": "Caner2",
-      "productPrices": "70.000",
+      "productPrices": 30000,
       "productLink": "www.canersahin.net",
+      "date": "29.08.2023",
       "productId": 3,
       "id": 4
     },
     {
       "productName": "Caner2",
-      "productPrices": "70.000",
+      "productPrices": 70000,
       "productLink": "www.canersahin.net",
+      "date": "29.08.2023",
       "productId": 1,
       "id": 5
     },
     {
       "productName": "Caner2",
-      "productPrices": "70.000",
+      "productPrices": 100000,
       "productLink": "www.canersahin.net",
-      "productId": 2,
+      "date": "29.08.2023",
+      "productId": 6,
       "id": 6
+    },
+    {
+      "productName": "Caner2",
+      "productPrices": 20000,
+      "productLink": "www.canersahin.net",
+      "date": "29.08.2023",
+      "productId": 6,
+      "id": 7
+    },
+    {
+      "productName": "Caner2",
+      "productPrices": 20000,
+      "productLink": "www.canersahin.net",
+      "date": "29.08.2023",
+      "productId": 5,
+      "id": 8
+    },
+    {
+      "productName": "Caner2",
+      "productPrices": 70000,
+      "productLink": "www.canersahin.net",
+      "date": "29.08.2023",
+      "productId": 1,
+      "id": 5
+    },
+    {
+      "productName": "Caner2",
+      "productPrices": 70000,
+      "productLink": "www.canersahin.net",
+      "date": "29.08.2023",
+      "productId": 1,
+      "id": 5
+    },
+    {
+      "productName": "Caner2",
+      "productPrices": 70000,
+      "productLink": "www.canersahin.net",
+      "date": "29.08.2023",
+      "productId": 1,
+      "id": 5
+    },
+    {
+      "productName": "Caner2",
+      "productPrices": 70000,
+      "productLink": "www.canersahin.net",
+      "date": "29.08.2023",
+      "productId": 1,
+      "id": 5
+    },
+    {
+      "productName": "Caner2",
+      "productPrices": 70000,
+      "productLink": "www.canersahin.net",
+      "date": "29.08.2023",
+      "productId": 1,
+      "id": 5
+    },
+    {
+      "productName": "Caner2",
+      "productPrices": 70000,
+      "productLink": "www.canersahin.net",
+      "date": "29.08.2023",
+      "productId": 1,
+      "id": 5
+    },
+    {
+      "productName": "Caner2",
+      "productPrices": 70000,
+      "productLink": "www.canersahin.net",
+      "date": "29.08.2023",
+      "productId": 1,
+      "id": 5
+    },
+    {
+      "productName": "Caner2",
+      "productPrices": 70000,
+      "productLink": "www.canersahin.net",
+      "date": "29.08.2023",
+      "productId": 1,
+      "id": 5
+    },
+    {
+      "productName": "Caner2",
+      "productPrices": 70000,
+      "productLink": "www.canersahin.net",
+      "date": "29.08.2023",
+      "productId": 1,
+      "id": 5
+    },
+    {
+      "productName": "Caner2",
+      "productPrices": 70000,
+      "productLink": "www.canersahin.net",
+      "date": "29.08.2023",
+      "productId": 1,
+      "id": 5
+    },
+    {
+      "productName": "Caner2",
+      "productPrices": 70000,
+      "productLink": "www.canersahin.net",
+      "date": "29.08.2023",
+      "productId": 1,
+      "id": 5
+    },
+    {
+      "productName": "Caner2",
+      "productPrices": 70000,
+      "productLink": "www.canersahin.net",
+      "date": "29.08.2023",
+      "productId": 1,
+      "id": 5
     }
   ]
 }

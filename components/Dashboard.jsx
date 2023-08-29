@@ -36,7 +36,7 @@ function Dashboard() {
   const handleChange = (event) => {
     const newSelectedProductId = event.target.value;
     setSelectedProductId(newSelectedProductId);
-    refetchById(newSelectedProductId); // Yeni ürün ID'si ile refetch yapılmalı.
+    refetchById(newSelectedProductId); // Yeni ürün ID'si ile refetch yapılıyor
   };
   return (
     <>

@@ -42,8 +42,8 @@ const productApi = createApi({
           }
         },
         transformResponse: (response) => {
-          var tableColumnName = ["Product ID", "Product Name", "Price", "Product Link", "Event"]
-          var tableColumnData = ["productId", "productName", "productPrices", "productLink"]
+          var tableColumnName = ["Product ID", "Product Name", "Price", "Product Link", "Date", "Event"]
+          var tableColumnData = ["productId", "productName", "productPrices", "productLink", "date"]
           response.tableColumnName = tableColumnName
           response.tableColumnData = tableColumnData
           response.iconType = { "iconType": "LINK", "color": "primary" }
@@ -52,7 +52,6 @@ const productApi = createApi({
       }),
       addProducts: builder.mutation({
         query: (newProduct) => {
-          console.log(newProduct)
           return {
             url: '/product',
             method: 'POST',

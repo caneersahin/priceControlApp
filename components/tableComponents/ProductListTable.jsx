@@ -25,7 +25,15 @@ function ProductListTable({ data, isError, refetch }) {
         </TableHead>
         <TableBody>
           {data.map((item) => (
-            <TableRowItem key={item.id} tableProps = {{ data:item, refetch: refetch, tableColumnDatas, iconType: tableIconType}} />
+            <TableRowItem
+              key={item.id}
+              tableProps={{
+                data: item,
+                refetch: refetch,
+                tableColumnDatas,
+                iconType: tableIconType,
+              }}
+            />
           ))}
         </TableBody>
       </Table>

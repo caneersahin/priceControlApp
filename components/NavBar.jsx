@@ -19,12 +19,17 @@ import ListItemText from "@mui/material/ListItemText";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
 import Dashboard from "./Dashboard";
+import Chart from "./Chart";
+import DatatebleCreator from "./datatableComponents/DatatebleCreator";
+
+
 import { Routes, Route, NavLink } from "react-router-dom";
 
 const drawerWidth = 240;
 
-const PAGELIST = ["Dashboard", "Page1", "Page2"];
-
+const PAGELIST = [{"pageName":"Dashboard", "pageUrl":"/"},
+{"pageName":"Datatable", "pageUrl":"/datatable"},
+{"pageName":"Page 2", "pageUrl":"/page2"}];
 const Main = styled("main", { shouldForwardProp: (prop) => prop !== "open" })(
   ({ theme, open }) => ({
     flexGrow: 1,
@@ -69,6 +74,7 @@ const DrawerHeader = styled("div")(({ theme }) => ({
   justifyContent: "flex-end",
 }));
 
+
 export default function PersistentDrawerLeft() {
   const theme = useTheme();
   const [open, setOpen] = React.useState(true);
@@ -96,7 +102,7 @@ export default function PersistentDrawerLeft() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-            Persistent drawer
+            Product Control App
           </Typography>
         </Toolbar>
       </AppBar>
@@ -126,11 +132,11 @@ export default function PersistentDrawerLeft() {
         <List>
           {PAGELIST.map((text, index) => (
             <NavLink
-              to={"/" + text.toLowerCase()} // Yol oluşturma (örneğin /dashboard)
-              key={text}
+            to={text.pageUrl.toLowerCase()}
+              key={text.pageName}
               style={{ color: "darkslategrey" }}
             >
-              <ListItem key={text} disablePadding sx={{ display: "block" }}>
+              <ListItem key={text.pageName} disablePadding sx={{ display: "block" }}>
                 <ListItemButton
                   sx={{
                     minHeight: 48,
@@ -147,7 +153,7 @@ export default function PersistentDrawerLeft() {
                   >
                     {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
                   </ListItemIcon>
-                  <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
+                  <ListItemText primary={text.pageName} sx={{ opacity: open ? 1 : 0 }} />
                 </ListItemButton>
               </ListItem>
             </NavLink>
@@ -159,8 +165,10 @@ export default function PersistentDrawerLeft() {
         <DrawerHeader />
         <Routes>
         <Route path="/" element={<Dashboard />} />
-
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/productDetail/:id" element={<Chart />} />
+          <Route path="/datatable" element={<DatatebleCreator />} />
+
         </Routes>
       </Main>
     </Box>

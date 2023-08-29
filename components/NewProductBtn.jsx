@@ -55,7 +55,12 @@ function NewProductBtn() {
   const { refetch: refetchProducts } = useFetchProductsQuery();
 
   const handleAddProduct = () => {
-    addProduct({ name: productName, link: productLink })
+    const date = new Date(); // Şu anki tarih ve saat
+    const options = { day: "numeric", month: "numeric", year: "numeric" };
+    const formatter = new Intl.DateTimeFormat("tr-TR", options);
+    const formattedDate = formatter.format(date);
+
+    addProduct({ name: productName, link: productLink, date: formattedDate })
       .then(() => {
         toast.success("Product added successfully"); // Toast mesajını burada gösteriyoruz
         refetchProducts();
