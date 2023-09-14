@@ -17,7 +17,7 @@ Frontend :
 
 Backend:
 - [Node JS](https://nodejs.org/tr)
-- [Selenium](https://www.npmjs.com/package/selenium-webdriver))
+- [Selenium](https://www.npmjs.com/package/selenium-webdriver)
 - [Sql](https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16)
  
 
@@ -28,7 +28,7 @@ Kısacası, bu uygulama, ürün fiyatlarını çeşitli fiyat karşılaştırma 
 
 Veriler, Node.js'de bulunan SELENIUM kütüphanesi kullanılarak, belirli bir fiyat takip sitesinin HTML yapısından çekilir. Price Control App UI, bu verileri Price Control App API projesinden alır.
 
-Price Control App API projesinin kaynak kodları da bu [ [repository](https://github.com/yourusername/priceControlAppAPI)](https://github.com/caneersahin/priceControlAppAPI.git) ] içinde bulunmaktadır.
+Price Control App API projesinin kaynak kodları da bu (https://github.com/caneersahin/priceControlAppAPI.git) içinde bulunmaktadır.
 
 ## Katkıda Bulunma
 
